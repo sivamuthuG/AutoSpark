@@ -83,15 +83,15 @@
 		<div class="bug-body">
 			<div class="my-3">
 				<label class="la-name">Bug Title</label>
-				<input type="name" class="form-control my-2" id="exampleFormControlInput1" style="font-size :13px;width: 440px;" placeholder="Enter the BugName">
+				<input type="name" class="form-control my-2" id="exampleFormControlInput1" style="font-size :13px;width: 700px;" placeholder="Enter the BugName">
 				<!-- <label class="la-name">Description</label>
 				<input type="name" class="form-control my-2 " id="exampleFormControlInput1" style="font-size :13px;width: 440px;" placeholder="Enter your Description "> -->
 				 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
- 				 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+ 				 <textarea class="form-control my-2" id="exampleFormControlTextarea1" style="font-size :13px;width: 700px;" rows="3"></textarea>
 				<label class="la-name">Tag Name</label>
-				<input type="name" class="form-control my-2 " id="exampleFormControlInput1" style="font-size :13px;width: 440px;" placeholder="Enter the TagName">
+				<input type="name" class="form-control my-2 " id="exampleFormControlInput1" style="font-size :13px;width: 700px;" placeholder="Enter the TagName">
 	   			<label class="la-name">Assinee Name</label>
-				<input type="name" class="form-control my-2 " id="exampleFormControlInput1" style="font-size :13px;width: 440px;" placeholder="Enter the Name">
+				<input type="name" class="form-control my-2 me-2" id="exampleFormControlInput1" style="font-size :13px;width: 700px;" placeholder="Enter the Name">
 				<div class="my-5">
 					<button type="button" class="btn btn-danger btn-sm" id="bugadd-Id">Add</button>
 					<button type="button" class="btn btn-danger btn-sm mx-2" id="bugcancel-Id">Cancel</button>
@@ -102,9 +102,171 @@
 		</div>
 	</div>
 </div>
-	<!-- <div id="demo"></div> -->
-	<!-- <div id="jqxLoader">
-    </div> -->
+
+<div class="build-form">
+	<div class="row d-flex justify-content-end">
+		<div class="build-form-temp">
+			<div class="build-form-header">
+				<h6 class="text-danger my-2">Add Build</h6>
+				<hr class="my-2">
+			</div>
+			<div class="">
+				<div>
+					<label class="text-danger build-form-lable my-3">Checkout Lable</label>
+					<select class="form-control form-control-sm" style="width: 660px;">
+  						<option>Project</option>
+  						<option>Task</option>
+  						<option>Issue</option>
+  						<option>Milestone</option>
+					</select>
+				</div>
+				<div class="row">
+					<label class="text-danger build-form-lable my-3">Build Type</label>
+						<div class="col-2">
+							<div class="form-check" >
+								<input class="form-check-input" type="radio" name="exampleRadios"  id="exampleRadios1" value="option1" checked>
+								<label class="form-check-label build-form-font" for="exampleRadios1">Full</label>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+								<label class="form-check-label build-form-font" for="exampleRadios1">Window</label>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+								<label class="form-check-label build-form-font" for="exampleRadios1">Linux</label>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+								<label class="form-check-label build-form-font" for="exampleRadios1">Mac Os</label>
+							</div>
+						</div>
+					</div>					
+					<div class="">
+						<label class="text-danger build-form-lable my-3">Dependency Module</label>
+						<input class="form-control form-control-sm build-form-font" style="width: 660px;" type="text" placeholder="Enter Dependency Name">
+					</div>
+					<label class="text-danger build-form-lable my-3">IDC Zip Needed</label>
+					<select class="form-control form-control-sm build-form-font" style="width: 660px;">
+  						<option>Yes</option>
+  						<option>No</option>
+					</select>
+					<label class="text-danger build-form-lable my-3">Impact run</label>
+					<select class="form-control form-control-sm build-form-font" style="width: 660px;">
+  						<option>Yes</option>
+  						<option>No</option>
+					</select>
+					<div class="row " style="width: 660px;">
+						<label class="text-danger build-form-lable my-3">Build Generate Report Needed</label>
+						<div class="col-2">
+							<div class="form-check form-check-inline ">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+								<label class="form-check-label build-form-font" for="inlineRadio1">Yes</label>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+								<label class="form-check-label build-form-font" for="inlineRadio2">No</label>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="width: 660px;">
+						<label class="text-danger build-form-lable my-3">SD Deploy Needed</label>
+						<div class="col-2">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+								<label class="form-check-label build-form-font" for="inlineRadio3">Yes</label>
+							</div>
+						</div>
+						<div class="col-2">
+							<div class="form-check form-check-inline" style="width: 660px;">
+								<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+								<label class="form-check-label build-form-font" for="inlineRadio4">No</label>
+							</div>
+						</div>
+					</div>
+					<div class="upBtn my-3" >
+						<button type="button" class="btn btn-danger me-3" id="buil-start-btn">Start</button>
+						<button type="button" class="btn btn-danger" id="buil-cancel-btn">Cancel</button>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="test-form">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="d-flex justify-content-end">
+						<div class="test-form-tem" style="    width: 700px;background: #fff;height: 850px;">
+							<div class="row">
+								<div class="container mx-3">
+									<div class="run-form-header my-2">
+										<h6 class="text-danger">Add New Test Classes</h6>
+										<hr class="my-2">
+									</div>
+									<form>	
+									<div class="form-group">
+									   <label class="text-danger my-2">Build Name</label>
+									   <input type="email" class="form-control inputBox-temp " id="exampleFormControlInput1" placeholder="Enter the Build Name">
+									</div>
+									<div class="">
+										<label class="text-danger my-2">Select Domain</label>
+										<select class="form-control inputBox-temp">
+				  							<option class="la-name">--Select--</option>
+										</select>
+									</div>
+									<div class="">
+										<label class="text-danger my-2">Select Machine</label>
+										<select class="form-control inputBox-temp">
+				  							<option class="opt-font">--Select--</option>
+				  							<option class="opt-font">Windows</option>
+				  							<option class="opt-font">Linux</option>
+				  							<option class="opt-font">Mac Os</option>
+										</select>
+									</div>
+									<div class="">
+										<label class="text-danger my-2">Number Of Browsers</label>
+										<select class="form-control inputBox-temp">
+				  							<option class="la-name">--Select--</option>
+										</select>
+									</div>
+									<div class="row">
+										<div class="col-md-6 col-sm-12">
+											<div class="form-group">
+									   			<label class="text-danger my-2">Module Name</label>
+									   			<input type="name" class="form-control" style="width: 320px;" id="exampleFormControlInput1" placeholder="Enter the TesterName">
+											</div>
+										</div>
+									    <div class="col-md-6 col-sm-12" style="width: 320px;">
+									    	<label class="text-danger my-2">Priority</label>
+									    	<select class="form-control">
+				  								<option class="la-name">None</option>
+				  								<option class="la-name">Low</option>
+				  								<option class="la-name">Medium</option>
+				  								<option class="la-name">High</option>
+											</select>
+									    </div>
+									</div>
+									<div class="my-3">
+										<button type="button" class="btn btn-secondary me-3" id="run-btn-add">Run Test</button>
+										<button type="button" class="btn btn-secondary" id="run-btn-cancel">Cancel</button>
+									</div>
+								</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	<!-- BODY -->
 	<div class="row toolBody">
 		<div class="expand" data-toggle="tooltip" data-placement="bottom" title="Minimize" aria-hidden="true" style="color: #c4c4c4;" id="expand_Id">
@@ -178,6 +340,7 @@
 					<i class="fa fa-arrow-circle-left full-view" data-toggle="tooltip" data-placement="right" title="Full View" aria-hidden="true" style="color: #454949;" id="full-view-Id"></i>
 			</div>
 		</div>
+	
 	<div class="col-11 viewBody">
 		<div class="dashview1 bodySection my-4" id='dashboard'>
 			<div class="row">
@@ -244,8 +407,8 @@
 								
 							</div>
 						</div>
-						</div>
 					</div>
+				</div>
 			</div>
 			<div class="row my-3">
 				<div class="col-sm-8">
@@ -395,145 +558,12 @@
 									</tr> 
 								</tbody>
 							</table>
-								</div>
-						</div>
-						</div>
-					</div>
-		</div>
-
-	<!-- DashBoardView -->
-	<!-- <div id='dashboard'class="bodySection dashview1">
-		<div class="dashview1">
-			<div class=" container mx-10">
-				<div class="dash-header">
-					<div class="row">
-						<div class="col-md-6 col-xl-4">
-							<div class="card mb-2 my-2 bg-night-fade cardSizedash">
-								<div class="container mt-4">
-									<div class="row align-items-center">
-										<div class="col-md-9">
-											<div class="case-text">
-												<div>
-													<p class="text-white head-text">Total Test Cases</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-3">
-											<div class="case-text">
-												<h3 class="text-white head-text">07</h3>
-											</div>
-										</div>
-									</div>	
-								</div>	
-							</div>
-						</div>
-					<div class="col-md-6 col-xl-4">
-						<div class="card mb-2 my-2 bg-green cardSizedash">
-							<div class="container mt-4">
-								<div class="row align-items-center">
-									<div class="col-md-9">
-										<div class="case-text">
-											<div>
-											<p class="text-white head-text">Passed Test Cases</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="case-text">
-											<h3 class="text-white head-text">06</h3>
-										</div>
-									</div>
-								</div>	
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-xl-4">
-						<div class="card mb-2 my-2 bg-miled cardSizedash">
-							<div class="container mt-4">
-								<div class="row align-items-center">
-									<div class="col-md-9">
-										<div class="case-text">
-											<div>
-											<p class="text-white head-text">Failed Test Cases</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3">
-										<div class="case-text">
-											<h3 class="text-white head-text">01</h3>
-										</div>
-									</div>
-								</div>	
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="dashbody">
-				<div class="row">
-						<div class="col-md-12 col-lg-6 col-xl-5">
-								<div class="card details-card-head">
-									<div class="card-header text-white bg-success" style="text-align: center;">
-										<h5>Passed Casses</h5>
-									</div>
-									<div class="card-body" style="padding: 0px 0px;">
-									    <div class="container">
-									       <canvas id="myChart"></canvas>
-									    </div>
-									</div>
-								</div>
-								<div class="card my-1 details-card-head">
-									<div class="card-header text-white bg-danger" style="text-align: center;">
-										<h5>Failled Casses</h5>
-									</div>
-								<div class="card-body" style="padding: 0px 0px;">
-									<div class="container">
-								      	<canvas id="myChart1"></canvas>
-									</div>
-								</div>
-							</div>
-					</div>
-					<div class="col-md-12 col-lg-6 col-xl-7">
-						<div class="card">
-							<div class="card-header text-white bg-primary" style="text-align: center;">
-								<h5>Total Casses</h5>
-							</div>
-							<div class="card-body">
-								<canvas id="doughnutChart"></canvas>
+		</div>
 
-								<div class="container" style="height: 150px;">
-									<div class="table table-hover">
-										<table class="table table-hover">
-							  <thead style="color: #e38b1894;">
-							    <tr>
-							      <th scope="col">ID</th>
-							      <th scope="col">TYPE</th>
-							      <th scope="col">CASES</th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <th scope="row">1</th>
-							      <td>Passed Cases</td>
-							      <td>06</td> 
-							    </tr>
-							    <tr>
-							      <th scope="row">2</th>
-							      <td>Faild Cases</td>
-							      <td>01</td> 
-							    </tr>
-							  </tbody>
-							</table>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</div>
-		</div>
-		</div> -->
 
 		<!-- ReportView -->
 		<div id='report' class="bodySection reportView my-2">
@@ -646,153 +676,11 @@
 				</div>
 			</div>
 		</div>
-		</div>
-
-		<!-- BuildView -->
-		<div id='build'class="bodySection codeReview">
-			<div class="codeReview1">
-			<div class="row codeBox">
-				<div class="container-fluid">
-			<div class="col-sm-12">
-				<div class="container my-5">
-					<div class="container-fluid">
-						<div class="uploadBox">
-						<div class="row">
-							<div class="col-4">
-								<div class="types">
-									<div class="container build-la mx-5" style="color: #fa1616;">
-										<p>Checkout Lable</p>
-										<div class="text-ma">
-											<p>Build Type</p>
-										</div>
-										<div class="text-ma">
-											<p>Dependency Module</p>
-										</div>
-										<div class="text-ma">
-											<p>IDC Zip Needed</p>
-										</div>
-										<div class="text-ma">
-											<p>Impact Run</p>
-										</div>
-										<div class="text-ma">
-											<p>Security Report Needed</p>
-										</div>
-										<div class="text-ma">
-											<p>Build Generate Report Needed</p>
-										</div>
-										<div class="text-ma">
-											<p>SD Deploy Needed</p>
-										</div>
-									</div>	
-								</div>
-							</div>
-							<div class="col-8">
-								<div class="types">
-									<div class="container build-la">
-										<div>
-											<select class="form-control form-control-sm">
-  												<option>Project</option>
-  												<option>Task</option>
-  												<option>Issue</option>
-  												<option>Milestone</option>
-											</select>
-										</div>
-										<div class="row text-ma sele-rdio">
-											<div class="col-3">
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-												  	<label class="form-check-label" for="exampleRadios1">Full</label>
-												</div>
-											</div>
-											<div class="col-3">
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-												  	<label class="form-check-label" for="exampleRadios1">Window</label>
-												</div>
-											</div>
-											<div class="col-3">
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-												  	<label class="form-check-label" for="exampleRadios1">Linux</label>
-												</div>
-											</div>
-											<div class="col-3">
-												<div class="form-check">
-													<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-												  	<label class="form-check-label" for="exampleRadios1">Mac Os</label>
-												</div>
-											</div>
-										</div>
-										<div class="text-ma1">
-											<input class="form-control form-control-sm" type="text" placeholder="Enter Dependency Name">
-										</div>
-										<div>
-											<select class="form-control form-control-sm" style="margin-top: 20px;">
-  												<option>Yes</option>
-  												<option>No</option>
-											</select>
-										</div>
-										<div>
-											<select class="form-control form-control-sm" style="margin-top: 20px;">
-  												<option>Yes</option>
-  												<option>No</option>
-											</select>
-										</div>
-										<div class="row sele-rdio" style="margin-top: 30px;">
-											<div class="col-4">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-											 		<label class="form-check-label" for="inlineRadio1">Yes</label>
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-													<label class="form-check-label" for="inlineRadio2">No</label>
-												</div>
-											</div>
-										</div>
-										<div class="row sele-rdio">
-											<div class="col-4">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-											 		<label class="form-check-label" for="inlineRadio1">Yes</label>
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-													<label class="form-check-label" for="inlineRadio2">No</label>
-												</div>
-											</div>
-										</div>
-										<div class="row sele-rdio">
-											<div class="col-4">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-											 		<label class="form-check-label" for="inlineRadio1">Yes</label>
-												</div>
-											</div>
-											<div class="col-4">
-												<div class="form-check form-check-inline">
-													<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-													<label class="form-check-label" for="inlineRadio2">No</label>
-												</div>
-											</div>
-										</div>
-										<div class="upBtn my-5" id="buil-btn-id">
-											<button type="button" class="btn btn-secondary">Build</button>
-										</div>
-									</div>	
-								</div>
-							</div>
-						</div>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
+
+<!-- BuildView -->
+<div id='build'class="bodySection codeReview">
+	<div class="codeReview1">	
 		<div class="build-report">
 			<div class="container">
 				<div class="new-build-btn">
@@ -850,6 +738,7 @@
 		</div>
 	</div>
 </div>
+
 	<!-- RunTest -->
 	<div id='runtest' class="bodySection run-report">
 		<div class="run-report1">
@@ -919,76 +808,13 @@
 					</table>
 				</div>
 			</div>
-		</div>
-		<div class="testCode">
-			<div class="container-fluid">
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="container">
-						<div class="test1 my-5">
-							<div class="row run-form">
-								<div class="form-wi">
-									<form>	
-									<div class="form-group">
-									   <label class="la-name">Build Name</label>
-									   <input type="email" class="form-control bor-cancel " id="exampleFormControlInput1" placeholder="Enter the Build Name">
-									</div>
-									<div class="domain">
-										<label class="la-name">Select Domain</label>
-										<select class="form-control bor-cancel">
-				  							<option class="la-name">--Select--</option>
-										</select>
-									</div>
-									<div class="domain">
-										<label class="la-name">Select Machine</label>
-										<select class="form-control bor-cancel">
-				  							<option class="opt-font">--Select--</option>
-				  							<option class="opt-font">Windows</option>
-				  							<option class="opt-font">Linux</option>
-				  							<option class="opt-font">Mac Os</option>
-										</select>
-									</div>
-									<div class="browser">
-										<label class="la-name">Number Of Browsers</label>
-										<select class="form-control bor-cancel">
-				  							<option class="la-name">--Select--</option>
-										</select>
-									</div>
-									<div class="form-row row">
-										<div class="col-lg-6 col-sm-12 browser">
-											<div class="form-group">
-									   			<label class="la-name">Module Name</label>
-									   			<input type="name" class="form-control bor-cancel " id="exampleFormControlInput1" placeholder="Enter the TesterName">
-											</div>
-										</div>
-									    <div class="col-lg-6 col-sm-12" style="margin-top: 20px;">
-									    	<label class="la-name">Priority</label>
-									    	<select class="form-control bor-cancel">
-				  								<option class="la-name">None</option>
-				  								<option class="la-name">Low</option>
-				  								<option class="la-name">Medium</option>
-				  								<option class="la-name">High</option>
-											</select>
-									    </div>
-									</div>
-									<div class="run-btn">
-										<button type="button" class="btn btn-secondary" id="run-btn">Run Test</button>
-									</div>
-								</form>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		</div>	
 	</div>
-</div>
 
-		<!-- LinkView -->
-		<div id='link' class="bodySection linkview">
-			<div class="linkview1">
-			<div class="row"><!-- link-tittle-card -->
+	<!-- LinkView -->
+	<div id='link' class="bodySection linkview">
+		<div class="linkview1">
+			<div class="row">
 				<div class="col-4">
 					<div class="create-li hov-li">
 						<div class="card card-header" style="background: #80dbdbfa;text-align:center ;">
