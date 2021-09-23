@@ -11,14 +11,12 @@ $(document).ready(function(){
     $(".toolmenu").hide(500);
     $(".expand").show();
     $(".full-view").hide();
-  /*  $(".viewBody").css("margin-left","90px");*/
   });
 
    $("#expand_Id").click(function(){
     $(".toolmenu").show(500);
     $(".expand").hide();
     $(".full-view").show();
-    /*$(".viewBody").css("margin-left","0px");*/
   });
 
   $('#logo-Id').click(function() {
@@ -29,37 +27,45 @@ $(document).ready(function(){
   });
 
   $("#new-build").click(function(){
-    $(".build-report").hide();
-    $(".codeBox").show();
+    $(".build-form").show();
+    $(".viewBody").addClass("freeze-Back");
   });
 
-  $("#buil-btn-id").click(function(){
-     $(".codeBox").hide();
-    $(".build-report").show();
-   
+  $("#buil-start-btn").click(function(){
+     $(".build-form").hide();
+     $(".viewBody").removeClass("freeze-Back");
   });
+
+   $("#buil-cancel-btn").click(function(){
+     $(".build-form").hide();
+     $(".viewBody").removeClass("freeze-Back");
+  });  
   
   $("#bug-Id-new").click(function(){
 
      $(".bug-content").show();
+     $(".viewBody").addClass("freeze-Back");
    
   });
 
   $("#bug-Id").click(function(){
 
      $(".bug-content").show();
+     $(".viewBody").addClass("freeze-Back");
    
   });
 
    $("#bugadd-Id").click(function(){
 
      $(".bug-content").hide();
+     $(".viewBody").removeClass("freeze-Back");
    
   });
 
     $("#bugcancel-Id").click(function(){
 
      $(".bug-content").hide();
+     $(".viewBody").removeClass("freeze-Back");
    
   });
 
@@ -75,14 +81,19 @@ $(document).ready(function(){
    
   });
     
- $("#run-btn").click(function(){
-    $(".testCode").hide();
-    $(".run-report1").show();
+ $("#run-btn-add").click(function(){
+    $(".test-form").hide();
+    $(".viewBody").removeClass("freeze-Back");
+  });
+
+ $("#run-btn-cancel").click(function(){
+    $(".test-form").hide();
+    $(".viewBody").removeClass("freeze-Back");
   });
 
    $("#new-run").click(function(){
-    $(".testCode").show();
-    $(".run-report1").hide();
+    $(".test-form").show();
+     $(".viewBody").addClass("freeze-Back");
   });
 
    $('#logo-Id').click(function() {
