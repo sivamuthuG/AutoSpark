@@ -1043,8 +1043,14 @@ td{
     overflow-y: hidden;
 }
 
+.profilecloseI{
+    font-size: 25px;
+    margin-left: 70px;
+    color: #e35c69;
+}
 
 .userProfile{
+    display: none;
     position: fixed;
     width: 100%;
     height: Auto;
@@ -1054,7 +1060,7 @@ td{
 .userCard{
     background: #fff;
     width: 450px;
-    height: 200px;
+    height: 275px;
     margin-top: 45px;
 }
 
