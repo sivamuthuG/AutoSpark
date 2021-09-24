@@ -97,7 +97,10 @@ $(document).ready(function(){
       location.reload();
     });
 
-
+   $("#closeId").click(function(){
+      $(".userProfile").hide();
+      $(".viewBody").removeClass("freeze-Back");
+   });
 
 document.addEventListener('keydown', function(event){
   if(event.key === "Escape"){
@@ -105,6 +108,7 @@ document.addEventListener('keydown', function(event){
     $("#formId1").hide();
     $("#formId2").hide();
     $("#formId3").hide();
+    $("#formIduser").hide();
     $(".viewBody").removeClass("freeze-Back");
   }
 });
@@ -112,6 +116,7 @@ document.addEventListener('keydown', function(event){
 
 $('#userId').click(function() {
     $(".userProfile").show();  
+    $(".viewBody").addClass("freeze-Back");
 });
 
 
