@@ -20,10 +20,7 @@ $(document).ready(function(){
   });
 
   $('#logo-Id').click(function() {
-   
     location.reload();
-   
-    
   });
 
   $("#new-build").click(function(){
@@ -69,15 +66,15 @@ $(document).ready(function(){
    
   });
 
-    $("#imp-sub-btn").click(function(){
-     $(".add-impact").hide();
-    $(".impact-Body").show();
+  $("#imp-sub-btn").click(function(){
+    $(".impact-form").hide();
+     $(".viewBody").removeClass("freeze-Back");
    
   });
 
   $("#imp-add").click(function(){
-     $(".impact-Body").hide();
-    $(".add-impact").show();
+    $(".impact-form").show();
+    $(".viewBody").addClass("freeze-Back");
    
   });
     
@@ -99,6 +96,24 @@ $(document).ready(function(){
    $('#logo-Id').click(function() {
       location.reload();
     });
+
+
+
+document.addEventListener('keydown', function(event){
+  if(event.key === "Escape"){
+    $("#formId").hide();
+    $("#formId1").hide();
+    $("#formId2").hide();
+    $("#formId3").hide();
+    $(".viewBody").removeClass("freeze-Back");
+  }
+});
+
+
+$('#userId').click(function() {
+    $(".userProfile").show();  
+});
+
 
     document.onreadystatechange = function() {
       if (document.readyState !== "complete") {
