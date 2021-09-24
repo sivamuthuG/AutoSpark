@@ -22,7 +22,7 @@
 				<h class="nameText"><b>AutoSpark</b></h>
 			</div>
 		</div>
-		<div class="col-8">
+	<div class="col-8">
 		<nav class="navbar navbar-expand-lg ">
 		  <div class="container-fluid">
 		    <div class="collapse navbar-collapse justify-content-end nav-move">
@@ -60,8 +60,8 @@
 					</div>
 		        </li>
 		        <li class="nav-item mx-2">
-		          <div class="profile">
-						<i class="fa fa-user-circle profileIcon"></i>
+		          <div class="profile" >
+						<i class="fa fa-user-circle profileIcon" id="userId"></i>
 					</div>
 		        </li>
 		      </ul>
@@ -69,9 +69,35 @@
 		  </div>
 		</nav>
 	</div>
-	</div>
+</div>
 
-	<div class="bug-content">
+<div class="userProfile" style="display: none;">
+	<div class="row ">
+		<div class="my-3 d-flex justify-content-end">
+			<div class="userCard">
+				<div class="user-header">
+					<h6 class="text-danger my-1 ms-1">User Name</h6>
+					<i class="fa fa-close float-end	"></i>
+					<hr class="bg-danger">
+				</div>
+				<div class="row">
+					<div class="col-4">
+						<div class="userProfilePic">
+							
+						</div>
+					</div>
+					<div class="col-8">
+						<div class="userDetails">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bug-content" id="formId">
 	<div class="row float-end">
 		<div class="bug-form container">
 				<div class="bug-header">
@@ -84,10 +110,8 @@
 			<div class="my-3">
 				<label class="la-name">Bug Title</label>
 				<input type="name" class="form-control my-2" id="exampleFormControlInput1" style="font-size :13px;width: 700px;" placeholder="Enter the BugName">
-				<!-- <label class="la-name">Description</label>
-				<input type="name" class="form-control my-2 " id="exampleFormControlInput1" style="font-size :13px;width: 440px;" placeholder="Enter your Description "> -->
-				 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
- 				 <textarea class="form-control my-2" id="exampleFormControlTextarea1" style="font-size :13px;width: 700px;" rows="3"></textarea>
+				<label for="exampleFormControlTextarea1" class="form-label">Description</label>
+ 				<textarea class="form-control my-2" id="exampleFormControlTextarea1" style="font-size :13px;width: 700px;" rows="3"></textarea>
 				<label class="la-name">Tag Name</label>
 				<input type="name" class="form-control my-2 " id="exampleFormControlInput1" style="font-size :13px;width: 700px;" placeholder="Enter the TagName">
 	   			<label class="la-name">Assinee Name</label>
@@ -103,7 +127,7 @@
 	</div>
 </div>
 
-<div class="build-form">
+<div class="build-form" id="formId1">
 	<div class="row d-flex justify-content-end">
 		<div class="build-form-temp">
 			<div class="build-form-header">
@@ -200,7 +224,7 @@
 		</div>
 	</div>
 
-	<div class="test-form">
+	<div class="test-form" id="formId2">
 			<div class="row">
 				<div class="col-sm-12">
 					<div class="d-flex justify-content-end">
@@ -267,6 +291,42 @@
 			</div>
 		</div>
 
+		<div class="impact-form" id="formId3">
+			<div class="d-flex justify-content-end">
+				<div class="impactBox-temp bg-white">
+					<div class="container">
+						<h5 class="text-danger my-2">Impact Add</h5>
+						<hr class="my-2">
+						<p class="text-danger my-2">Application Name</p>
+						<div class=" my-2">
+							<select class="form-control" style="font-size: 10px;width: 670px;">
+						  		<option class="">Zoho project</option>
+							</select>
+						</div>
+						<p class="my-1 text-danger">Master Branch</p>
+						<div class="my-2">
+							<select class="form-control"  style="font-size: 10px;width: 670px;">
+						  		<option class="">Master</option>
+							</select>
+						</div>
+						<p class="my-2 text-danger">Default Changeset</p>
+						<div class="form-group my-2">
+							<input type="name" style="font-size: 10px;width: 670px;" class="form-control sel-app-name impact-bor-cancel " id="exampleFormControlInput1">
+						</div>
+						<p class="my-2 text-danger">Branch</p>
+						<div class="form-group my-2">
+							<input type="name" style="font-size: 10px;width: 670px;" class="form-control sel-app-name impact-bor-cancel" id="exampleFormControlInput1" placeholder="Enter the Branch Name">
+						</div>
+						<p class="my-2 text-danger">Build Url</p>
+						<div class="form-group my-2">
+							<input type="name" style="font-size: 10px;width: 670px;" class="form-control sel-app-name impact-bor-cancel" id="exampleFormControlInput1" placeholder="Enter the Branch Url">
+						</div>	
+						<button type="button" style="font-size: 10px;" class="btn btn-secondary btn-sm imp-btn mb-3 mt-2" id="imp-sub-btn">Check Impact</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	<!-- BODY -->
 	<div class="row toolBody">
 		<div class="expand" data-toggle="tooltip" data-placement="bottom" title="Minimize" aria-hidden="true" style="color: #c4c4c4;" id="expand_Id">
@@ -310,20 +370,18 @@
 				<div class="more-content">
 					<div class="more-head"></div>
 					<div class="row">
-						<div class="cnt-txt">
-							<div class="row">
+						<div class="row">
 								<div class="Link  i-hover more-op-Id"id="link-Id" attr="link">
 									<i class="fa fa-link linkIcon" aria-hidden="true"></i>
 									<small class="moreIconTxt"  style="margin-top: 12px;"><b>Link</b></small>
 								</div>
-							</div>
-							<hr class="my-2 bg-danger">
-							<div class="row">
+						</div>
+						<hr class="my-2 bg-danger">
+						<div class="row">
 								<div class="impact  i-hover more-op-Id" id="report-Id" attr="impact">
 									<i class="fa fa-cog impactIcon"></i>
 									<small class="moreIconTxt" style="margin-top: 10px;"><b>Impact Analysis</b></small>
 								</div>
-							</div>
 						</div>
 						<hr class="my-2 bg-danger">
 						<div class="row">
@@ -997,7 +1055,7 @@
 			<div class="impact-Body">
 				<div class="container impact-header">
 					<h6 style="padding: 7px; float: left;">List Of Impact View</h6>
-					<button type="button" class="btn btn-secondary btn-sm" id="imp-add" style="margin-top: 2px;">Add</button>
+					<button type="button" class="btn btn-warning btn-sm float-end" id="imp-add" style="margin-top: 2px;">Add Impact</button>
 				</div>
 				<div class="container impact-table">
 					<div class="row import-report">
@@ -1046,45 +1104,6 @@
 							</div>
 						</div>
 					<hr>
-				</div>
-			</div>
-		</div>
-		<div class="add-impact">
-			<div class="row my-5">
-				<div class="container">
-					<div class="col-m-12 my-5">
-						<div class="container">
-							<div class="row d-flex justify-content-center">
-								<div class="impact-form bg-white">
-									<h6 class="my-1 text-danger">Application Name</h6>
-									<div class=" my-2">
-										<select class="form-control" style="font-size: 10px;">
-						  					<option class="">Zoho project</option>
-										</select>
-									</div>
-									<h6 class="my-1 text-danger">Master Branch</h6>
-									<div class="my-2">
-										<select class="form-control"  style="font-size: 10px;">
-						  					<option class="">Master</option>
-										</select>
-									</div>
-									<h6 class="my-1 text-danger">Default Changeset</h6>
-									<div class="form-group my-2">
-									   	<input type="name" style="font-size: 10px;" class="form-control sel-app-name impact-bor-cancel " id="exampleFormControlInput1">
-									</div>
-									<h6 class="my-1 text-danger">Branch</h6>
-									<div class="form-group my-2">
-									   	<input type="name" style="font-size: 10px;" class="form-control sel-app-name impact-bor-cancel" id="exampleFormControlInput1" placeholder="Enter the Branch Name">
-									</div>
-									<h6 class="my-1 text-danger">Build Url</h6>
-									<div class="form-group my-2">
-									   	<input type="name" style="font-size: 10px;" class="form-control sel-app-name impact-bor-cancel" id="exampleFormControlInput1" placeholder="Enter the Branch Url">
-									</div>	
-									<button type="button" style="font-size: 10px;" class="btn btn-secondary btn-sm imp-btn mb-3 mt-2" id="imp-sub-btn">Check Impact</button>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
